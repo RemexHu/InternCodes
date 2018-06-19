@@ -32,11 +32,11 @@ def dump(input_file, output_file=None):
 
             documents = sample['documents']
             question = sample['question']
-            title_list = []
+            title_list = set()
 
             for document in documents:
                 if document['is_selected']:
-                    title_list.append(document['title'])
+                    title_list.add(document['title'])
 
             # print(title_list)
             if title_list:
