@@ -7,6 +7,7 @@ def get_number_of_lines(file_path):
     with open(file_path, mode='r', encoding='utf-8') as f:
         for _ in f:
             count += 1
+    print(count)
     return count
 
 
@@ -85,4 +86,4 @@ def dump(input_file, output_file=None):
         writer.write('Document\tDocLen\tQuestion\tQuesLen\tAnswer\tAnsLen\tType\tFactOpinion\n')
         writer.writelines(sampled_lines)
 
-dump('D:/BusinessAIChina/BaiduDuReader/DuReader_v2.0_preprocess/preprocessed/devset/zhidao.dev.json')                
+dump('zhidao.dev.json')
